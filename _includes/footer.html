@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <a class="brand" href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="若途" width="32" height="32">
+        <span>若途</span>
+      </a>
+      <p>摩托车智能导航与骑行记录。连接车机、规划路线、记录每一次出发。</p>
+    </div>
+
+    <div class="footer-tools">
+      <div class="theme-switch" role="group" aria-label="主题">
+        <button type="button" data-theme-set="light" aria-label="浅色模式">{% include icon.html name="sun-dim" class="i i-16" %}</button>
+        <button type="button" data-theme-set="dark" aria-label="深色模式">{% include icon.html name="moon" class="i i-16" %}</button>
+        <button type="button" data-theme-set="system" aria-label="跟随系统">{% include icon.html name="monitor" class="i i-16" %}</button>
+      </div>
+    </div>
+
+    <div class="footer-rule" aria-hidden="true"></div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© <span data-year>{{ site.time | date: "%Y" }}</span> <a href="{{ "/" | relative_url }}">若途</a>, All rights reserved</p>
+      <nav class="footer-links" aria-label="法律信息">
+        <a href="{{ "/privacy-policy/" | relative_url }}">隐私政策</a>
+        <a href="{{ "/terms-of-service/" | relative_url }}">服务条款</a>
+      </nav>
+    </div>
+  </div>
+</footer>

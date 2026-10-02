@@ -1,0 +1,33 @@
+{% assign shots = site.data.landing.screenshots %}
+<section class="section">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">{{ shots.eyebrow }}</div>
+      <h2>{{ shots.title }}</h2>
+      <p>{{ shots.lead }}</p>
+    </div>
+
+    <div class="tour" data-carousel>
+      <div class="tour-track" data-track tabindex="0">
+        {% for item in shots.items %}
+        <article class="tour-slide">
+          <div class="tour-phone">
+            <div class="phone-notch phone-notch-sm" aria-hidden="true"></div>
+            <div class="preview-host" data-preview>
+              <div class="preview-stage">
+                {% include preview.html key=item.key %}
+              </div>
+            </div>
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="tour-nav">
+        <button type="button" data-prev aria-label="上一张" disabled>{% include icon.html name="arrow-left" class="i i-16" %}</button>
+        <button type="button" data-next aria-label="下一张">{% include icon.html name="arrow-right" class="i i-16" %}</button>
+      </div>
+    </div>
+  </div>
+</section>

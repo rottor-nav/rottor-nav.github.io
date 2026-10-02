@@ -1,0 +1,72 @@
+hero:
+  eyebrow: 摩托车骑行伴侣
+  title: 导航、车机与骑行记录，一路同行
+  lead: 若途将高德导航与 ICC 车辆互联融为一体。导航中自动采集 GPS 与车机传感器，生成可回放的 RRT 骑行轨迹。
+  primary: 下载 Android 版
+  note: 目前支持 Android。连接 ICC 兼容车辆时可同步里程、胎压、油量等车机数据。
+  trust:
+    - 高德地图导航
+    - ICC 车辆互联
+    - RRT 骑行记录
+
+pillars:
+  eyebrow: 三大能力
+  title: 从出发到归来，完整骑行闭环
+  lead: 地图、车机与记录协同工作，让每次骑行都有迹可循。
+  items:
+    - icon: map
+      title: 智能导航
+      desc: 地点搜索、路线规划、实时导航与兴趣点收藏，支持多种路线偏好与途经点。
+    - icon: bluetooth
+      title: 车辆互联
+      desc: 蓝牙连接 ICC 车机，同步总里程、胎压、油量、续航等实时车辆数据。
+    - icon: route
+      title: 骑行记录
+      desc: 导航中自动录制 RRT 格式轨迹，融合 GPS 位置与车辆传感器，支持回放与分享。
+
+screenshots:
+  eyebrow: 界面一览
+  title: 为骑行场景设计的清晰界面
+  lead: 地图、导航、车辆与记录模块各司其职，信息层级一目了然。
+  items:
+    - key: map
+      title: 地图与搜索
+      desc: 搜索地点与地址，收藏兴趣点，一键规划路线并开始导航。
+    - key: navi
+      title: 实时导航
+      desc: 转向提示、路线全览与多种播报模式，锁屏后台也能稳定运行。
+    - key: vehicle
+      title: 我的车辆
+      desc: 查看连接状态、里程、胎压与保养信息，支持多车切换。
+    - key: trip
+      title: 骑行记录
+      desc: 彩色速度轨迹回放、行程统计与轨迹图分享，记录每次出发。
+
+features:
+  eyebrow: 细节体验
+  title: 为骑手打磨的实用功能
+  lead: 从搜索到分享，每个环节都围绕真实骑行场景设计。
+  items:
+    - icon: map-pin
+      title: 兴趣点管理
+      desc: 收藏常去地点，按城市与类型筛选，快速发起导航。
+    - icon: navigation
+      title: 灵活路线规划
+      desc: 智能推荐、躲避拥堵、高速优先等多种偏好，支持途经点。
+    - icon: bluetooth
+      title: 实时车机数据
+      desc: 连接 ICC 后同步传感器数据，导航与记录更完整。
+    - icon: activity
+      title: RRT 轨迹格式
+      desc: 高精度分块存储，异常退出后可恢复导航与录制。
+    - icon: map
+      title: 速度彩色轨迹
+      desc: 行程回放以颜色区分速度区间，一眼看清骑行节奏。
+    - icon: share
+      title: 轨迹分享
+      desc: 生成轨迹图分享卡片，与朋友分享你的骑行路线。
+
+cta:
+  title: 准备好记录你的下一次出发了吗？
+  lead: 下载若途，让导航、车机与骑行数据在同一款 App 中汇聚。
+  primary: 下载 Android 版

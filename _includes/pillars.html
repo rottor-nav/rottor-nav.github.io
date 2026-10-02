@@ -1,0 +1,19 @@
+{% assign pillars = site.data.landing.pillars %}
+<section class="section">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">{{ pillars.eyebrow }}</div>
+      <h2>{{ pillars.title }}</h2>
+      <p>{{ pillars.lead }}</p>
+    </div>
+    <div class="pillar-grid">
+      {% for item in pillars.items %}
+      <article class="pillar-card">
+        <div class="icon-tile">{% include icon.html name=item.icon class="i i-20" %}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

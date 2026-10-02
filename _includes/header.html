@@ -1,0 +1,14 @@
+<header class="site-header" data-header>
+  <div class="site-header-bar">
+    <div class="container site-header-inner">
+      <a class="brand" href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="若途" width="32" height="32">
+        <span>若途</span>
+      </a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换浅色或深色模式">
+        <span class="theme-icon theme-icon-sun">{% include icon.html name="sun-dim" class="i i-24" %}</span>
+        <span class="theme-icon theme-icon-moon">{% include icon.html name="moon" class="i i-24" %}</span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,58 @@
+<div class="hero-device">
+  <div class="phone">
+    <div class="phone-notch" aria-hidden="true"></div>
+    <div class="hero-screen">
+      <div class="map-wash" aria-hidden="true"></div>
+      <div class="map-grid" aria-hidden="true"></div>
+      <svg class="route-svg" viewBox="0 0 280 520" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="routeHero" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF8C00" />
+            <stop offset="45%" stop-color="#FACC15" />
+            <stop offset="100%" stop-color="#22C55E" />
+          </linearGradient>
+        </defs>
+        <path d="M 40 420 C 80 360, 120 340, 150 280 S 200 180, 230 120" fill="none" stroke="url(#routeHero)" stroke-width="6" stroke-linecap="round" />
+        <circle cx="40" cy="420" r="7" fill="#EF4444" />
+        <circle cx="230" cy="120" r="7" fill="#22C55E" />
+      </svg>
+
+      <div class="hs-status">
+        <div class="hs-status-left">
+          <span>9:41</span>
+          {% include icon.html name="motorcycle" class="i i-12" %}
+        </div>
+        <div class="hs-status-right">
+          <span class="live-dot"></span>
+          {% include icon.html name="bluetooth" class="i i-12 text-primary" %}
+        </div>
+      </div>
+
+      <div class="hs-search">
+        {% include icon.html name="map-pin" class="i i-14 text-primary" %}
+        <span>搜索地点、地址...</span>
+      </div>
+
+      <div class="hs-hud">
+        <div class="hs-hud-row">
+          <div class="hs-turn">{% include icon.html name="navigation" class="i i-16 text-primary" %}</div>
+          <div>
+            <div class="hs-turn-title">前方 200 米右转</div>
+            <div class="hs-turn-sub">预计 18 分钟 · 12.4 km</div>
+          </div>
+        </div>
+        <div class="hs-stats">
+          <div><span>速度</span><strong>68</strong></div>
+          <div><span>里程</span><strong>42</strong></div>
+          <div><span>胎压</span><strong>2.4</strong></div>
+        </div>
+      </div>
+
+      <nav class="hs-tabs" aria-label="主导航">
+        <div class="is-active">{% include icon.html name="map" class="i i-14" %}<span>地图</span></div>
+        <div>{% include icon.html name="users" class="i i-14" %}<span>动态</span></div>
+        <div>{% include icon.html name="user" class="i i-14" %}<span>我的</span></div>
+      </nav>
+    </div>
+  </div>
+</div>

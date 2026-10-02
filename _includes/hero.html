@@ -1,0 +1,22 @@
+{% assign hero = site.data.landing.hero %}
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-orb" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow-pill"><span class="dot dot-orange"></span>{{ hero.eyebrow }}</div>
+      <h1>{{ hero.title }}</h1>
+      <p class="lead">{{ hero.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ site.apk_url }}" target="_blank" rel="noopener noreferrer">{{ hero.primary }}</a>
+      </div>
+      <ul class="trust">
+        {% for item in hero.trust %}
+        <li><span class="dot dot-primary"></span>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p class="note">{{ hero.note }}</p>
+    </div>
+    {% include hero-phone.html %}
+  </div>
+</section>

@@ -1,0 +1,30 @@
+title: 若途
+tagline: 摩托车智能导航与骑行记录
+description: 若途将高德导航与 ICC 车辆互联融为一体，导航中自动采集 GPS 与车机传感器，生成可回放的 RRT 骑行轨迹。
+keywords: rottor, 摩托车导航, 骑行记录, ICC 车机互联, RRT 轨迹, 高德地图, Android
+url: https://www.rottor.co
+lang: zh-CN
+timezone: Asia/Shanghai
+
+apk_url: https://r2.rottor.co/apk/rottor_1.2.0.210.apk
+
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

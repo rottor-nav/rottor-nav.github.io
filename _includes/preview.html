@@ -1,0 +1,119 @@
+<div class="pv{% if include.key == 'vehicle' or include.key == 'trip' %} pv-muted{% endif %}">
+  {% if include.key == "map" or include.key == "navi" %}
+  <div class="map-wash" aria-hidden="true"></div>
+  <div class="map-grid" aria-hidden="true"></div>
+  <svg class="route-svg" viewBox="0 0 360 760" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="route-{{ include.key }}" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FF8C00" />
+        <stop offset="45%" stop-color="#FACC15" />
+        <stop offset="100%" stop-color="#22C55E" />
+      </linearGradient>
+    </defs>
+    <path d="M 52 620 C 96 540, 138 500, 172 420 S 248 280, 292 180" fill="none" stroke="url(#route-{{ include.key }})" stroke-width="5" stroke-linecap="round" />
+    <circle cx="52" cy="620" r="6" fill="#EF4444" />
+    <circle cx="292" cy="180" r="6" fill="#22C55E" />
+  </svg>
+  <div class="pv-status">
+    <div class="hs-status-left"><span>9:41</span>{% include icon.html name="motorcycle" class="i i-12" %}</div>
+    <div class="hs-status-right"><span class="live-dot"></span>{% include icon.html name="bluetooth" class="i i-12 text-primary" %}</div>
+  </div>
+  {% endif %}
+
+  {% if include.key == "map" %}
+  <div class="pv-search">
+    {% include icon.html name="search" class="i i-20 text-primary" %}
+    <span>搜索地点、地址...</span>
+  </div>
+  <div class="pv-locate">{% include icon.html name="locate" class="i i-20 text-primary" %}</div>
+  <div class="pv-favs">
+    <div class="pv-favs-head">{% include icon.html name="map-pin" class="i i-16 text-primary" %}<span>收藏</span></div>
+    <div class="pv-fav"><span>公司</span>{% include icon.html name="chevron-right" class="i i-14" %}</div>
+    <div class="pv-fav"><span>家</span>{% include icon.html name="chevron-right" class="i i-14" %}</div>
+    <div class="pv-fav"><span>妙峰山</span>{% include icon.html name="chevron-right" class="i i-14" %}</div>
+  </div>
+  <nav class="pv-tabs" aria-hidden="true">
+    <div class="is-active">{% include icon.html name="map" class="i i-18" %}<span>地图</span></div>
+    <div>{% include icon.html name="users" class="i i-18" %}<span>动态</span></div>
+    <div>{% include icon.html name="user" class="i i-18" %}<span>我的</span></div>
+  </nav>
+  {% elsif include.key == "navi" %}
+  <div class="pv-banner">
+    <div class="pv-banner-icon">{% include icon.html name="navigation" class="i i-28 text-primary rot-nav" %}</div>
+    <div class="pv-banner-text">
+      <span class="muted">200米</span>
+      <strong>中关村大街</strong>
+    </div>
+  </div>
+  <div class="pv-speed"><span>68</span></div>
+  <div class="pv-sheet">
+    <div class="pv-handle" aria-hidden="true"></div>
+    <div class="pv-sheet-grid">
+      <div class="pv-sheet-side">{% include icon.html name="x" class="i i-20" %}<span>退出</span></div>
+      <div class="pv-sheet-main">
+        <strong>1小时28分钟 15.2公里</strong>
+        <span>13:00到达</span>
+      </div>
+      <div class="pv-sheet-side">{% include icon.html name="map" class="i i-20" %}<span>全览</span></div>
+    </div>
+  </div>
+  {% elsif include.key == "vehicle" %}
+  <div class="pv-toolbar">{% include icon.html name="arrow-left" class="i i-18" %}<span>我的车辆</span></div>
+  <div class="pv-body">
+    <div class="pv-moto">{% include icon.html name="motorcycle" class="i i-120" %}</div>
+    <div class="pv-chips">
+      <div class="pv-chip">{% include icon.html name="fuel" class="i i-20 text-green" %}<div><span>油量</span><strong>85%</strong></div></div>
+      <div class="pv-chip">{% include icon.html name="gauge" class="i i-20 text-green" %}<div><span>续航</span><strong>520 km</strong></div></div>
+    </div>
+    <div class="pv-card">
+      <div class="pv-card-title">F 850 GS</div>
+      <div class="pv-split">
+        <div>{% include icon.html name="gauge" class="i i-24" %}<strong>12,580 km</strong><span>总里程</span></div>
+        <div>{% include icon.html name="gauge" class="i i-24" %}<strong>42 km</strong><span>小计里程</span></div>
+      </div>
+      <div class="pv-split">
+        <div>{% include icon.html name="gauge" class="i i-24" %}<strong>2.4 bar</strong><span>前轮胎压</span></div>
+        <div>{% include icon.html name="gauge" class="i i-24" %}<strong>2.5 bar</strong><span>后轮胎压</span></div>
+      </div>
+    </div>
+  </div>
+  {% elsif include.key == "trip" %}
+  <div class="pv-toolbar">{% include icon.html name="arrow-left" class="i i-18" %}<span>骑行记录</span></div>
+  <div class="pv-body pv-trips">
+    <article class="trip-card">
+      <div class="trip-head">
+        <span class="trip-badge">{% include icon.html name="navigation" class="i i-12" %}</span>
+        <span class="muted">2026.06.02 17:34</span>
+        {% include icon.html name="share" class="i i-14 trip-share" %}
+      </div>
+      <div class="trip-route">
+        <div><i class="pin pin-red"></i><span>西二旗地铁站</span></div>
+        <div><i class="pin pin-green"></i><span>妙峰山风景区</span></div>
+      </div>
+      <div class="trip-metrics">
+        <div><strong>15.2<small>km</small></strong><span>行驶里程</span></div>
+        <div><strong>01:28</strong><span>骑行时长</span></div>
+        <div><strong>65<small>km/h</small></strong><span>平均速度</span></div>
+        <div><strong>92<small>km/h</small></strong><span>最快速度</span></div>
+      </div>
+    </article>
+    <article class="trip-card is-dim">
+      <div class="trip-head">
+        <span class="trip-badge">{% include icon.html name="navigation" class="i i-12" %}</span>
+        <span class="muted">2026.05.28 08:12</span>
+        {% include icon.html name="share" class="i i-14 trip-share" %}
+      </div>
+      <div class="trip-route">
+        <div><i class="pin pin-red"></i><span>国贸桥</span></div>
+        <div><i class="pin pin-green"></i><span>雁栖湖</span></div>
+      </div>
+      <div class="trip-metrics">
+        <div><strong>68.4<small>km</small></strong><span>行驶里程</span></div>
+        <div><strong>02:05</strong><span>骑行时长</span></div>
+        <div><strong>58<small>km/h</small></strong><span>平均速度</span></div>
+        <div><strong>88<small>km/h</small></strong><span>最快速度</span></div>
+      </div>
+    </article>
+  </div>
+  {% endif %}
+</div>

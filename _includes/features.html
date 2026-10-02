@@ -1,0 +1,21 @@
+{% assign features = site.data.landing.features %}
+<section class="section section-tight">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">{{ features.eyebrow }}</div>
+      <h2>{{ features.title }}</h2>
+      <p>{{ features.lead }}</p>
+    </div>
+    <div class="feature-grid">
+      {% for item in features.items %}
+      <article class="feature-card">
+        <div class="icon-tile icon-tile-sm">{% include icon.html name=item.icon class="i i-16" %}</div>
+        <div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
